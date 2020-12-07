@@ -19,30 +19,43 @@
       <nav class="principal">
               <ul>
                 <li>
-                  <a class="mobo" href="#infancia">Mobile <span> Frontend</span></a>
+                  <a class="mobo" href="https://www.labenu.com.br/">Mobile <span> Frontend</span></a>
                 </li>
                 <li>
-                  <a class="data" href="data">Data <span> Science<span></a>
+                  <a class="data" href="https://www.labenu.com.br/">Data <span> Science<span></a>
                 </li>
                 <li>
-                  <a class="fullstack" href="fullstack">Web <span>Fullstack</span></a>
+                  <a class="fullstack" href="https://www.labenu.com.br/">Web <span>Fullstack</span></a>
                 </li>
               </ul>
       </nav>
       <br>
       <a id="turmas">Turmas de 2020</a>  
 
-       <h4> Quer saber mais informações sobre o processo seletivo? Deixe o seu email!</h4>
+      <br></br>
+      <br></br>
+      <h4 id="troca">Quer saber mais informações sobre o processo seletivo? Deixe o seu email!</h4>
 
-      <form>
+      <p none id="troca"></p>
+
+      <script>
+      function funcao() {
+      document.getElementById("troca").innerHTML = "Seja bem-vindo, @";
+          }
+      </script>
+
+  </script>
+
+      <form name="form" onsubmit="return validate();" method="get">
         <label for="nome">Nome: </label>
-        <input type="text" name="nome" placeholder="Pode colocar o apelido">
+        <input type="text" required="" name="nome" placeholder="Pode colocar o apelido">
         <label for="email">Email: </label>
-        <input type="e-mail" name="email" placeholder="Ex.: seuemail@hotmail.com">
-        <button id="botaoEnviar">ENVIAR</button>
+        <input type="e-mail"  name="email" placeholder="Ex.: seuemail@hotmail.com" type="text">
+        <button id="botaoEnviar" onclick="funcao(); validarEmail()"  type="text">ENVIAR</button>
       </form>
       <script type="text/javascript" src="script.js"></script>
       <br></br>
+
       <footer>© 2020 Thais Leal, required by Labenu. All rights reserved.
         <br>
         <a href="https://www.facebook.com/Labenu-388131481831991/" class="fa fa-facebook"></a>

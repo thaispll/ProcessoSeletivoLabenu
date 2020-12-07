@@ -1,9 +1,13 @@
-document.getElementById("botaoEnviar").addEventListener("click", validaFormulario)
+document.getElementById("botaoEnviar").addEventListener("click")
 
-function validaFormulario() {
-    if (document.getElementById("nome").value != "" && document.getElementById("email").value != "") {
-        alert("Prontinho! Você receberá as novidades por email.")
-    } else {
-        alert("Por favor, preencha os campos nome e email!")
-    }
+function validate()
+      {
+       var email = document.forms["form"]["email"].value;
+       var correto = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (!email.match(correto))
+      {
+       alert("Email inválido!");
+       return true;
+      }
 }
